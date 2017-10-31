@@ -8,8 +8,6 @@ import { IonicPage } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
-
-  }
+  constructor() { }
 
 }

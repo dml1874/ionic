@@ -8,8 +8,6 @@ import { IonicPage } from 'ionic-angular';
 })
 export class ContactPage {
 
-  constructor(public navCtrl: NavController) {
-
-  }
+  constructor() { }
 
 }
