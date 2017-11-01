@@ -149,6 +149,7 @@ export class AppService {
             console.error("window.localStorage error:" + e);
         }
     }
+    
     getItem(key: string, callback) {
         try {
             var json = window.localStorage[key];
@@ -160,4 +161,3 @@ export class AppService {
         }
     }
 }
-

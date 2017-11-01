@@ -13,7 +13,7 @@ export class HomePage {
   categories: Array<any> = [];
   products: Array<any> = [];
 
-  spinner1: boolean = true;
+  spinnerl: boolean = true;
 
   params = {
   	favoritesId: 2054400,
@@ -24,7 +24,11 @@ export class HomePage {
   constructor(
   		public appService: AppService,
   		public navCtrl: NavController
-  	) { }
+  	) {
+    this.getSlides();
+    this.getCategories();
+    this.getProducts();
+  }
 
   //获取幻灯片
   getSlides() {
@@ -36,11 +40,34 @@ export class HomePage {
   	this.appService.httpGet(AppGlobal.API.getProducts, params, rs => {
   		console.debug(rs);
   		this.slides = rs.data;
-  		this.spinner1 = false;
+  		this.spinnerl = false;
   	})
   }
 
   //获取分类
-  getCategories() {}
+  getCategories() {
+    this.appService.httpGet(AppGlobal.API.getCategories, { appTag: 'dress' }, rs => {
+      console.debug(rs);
+      this.categories = rs.data;
+    })
+  }
+
+  //获取首页推荐列表
+  getProducts() {
+    this.appService.httpGet(AppGlobal.API.getProducts, this.params, rs => {
+      console.debug(rs);
+      this.products = rs.data;
+    })
+  }
+
+  //商品详情
+  goDetails(item) {
+    console.debug('go details...')
+  }
+
+  //分类栏目下的商品列标
+  goProductList(item) {
+    this.navCtrl.push('ProductListPage', { item: item });
+  }
 
 }
