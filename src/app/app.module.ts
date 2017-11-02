@@ -6,6 +6,7 @@ import { MyApp } from './app.component';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { ThemeableBrowser } from '@ionic-native/themeable-browser';
 import { AppService } from './app.service';
 
 @NgModule({
@@ -24,7 +25,8 @@ import { AppService } from './app.service';
   providers: [
     StatusBar,
     SplashScreen, AppService,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ThemeableBrowser
   ]
 })
 

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 //引入自定义组件
-import { IonProductsComponent } from '../../components/ion-products/ion-products';
+import { ComponentsModule } from '../../components/components.module';
 
 import { HomePage } from './home';
 
@@ -11,7 +11,7 @@ import { HomePage } from './home';
 	],
 	imports: [
 		IonicPageModule.forChild(HomePage),
-		IonProductsComponent
+		ComponentsModule
 	],
 })
 

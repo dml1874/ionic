@@ -11,7 +11,7 @@ export class ProductListPage {
   
   hasmore = true;
   products: any;
-  selectItem: any;
+  selectedItem: any;
 
   spinnerl: boolean = true;
 
@@ -21,8 +21,8 @@ export class ProductListPage {
   }
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public appService: AppService) { 
-  	this.selectItem = this.navParams.get('item');
-  	this.params.favoritesId = this.selectItem.FavoritesId;
+  	this.selectedItem = this.navParams.get('item');
+  	this.params.favoritesId = this.selectedItem.FavoritesId;
   }
 
   ionViewDidLoad() {

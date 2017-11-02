@@ -1,17 +1,15 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Contact
+  <ion-navbar color="primary" style="opacity: 0.8" no-border-bottom>
+    <ion-title text-center>
+      个人中心
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content fullscreen>
   <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
+    <button ion-item *ngFor="let item of items" (click)="itemClick(item)">
+      {{item.title}}
+    </button>
   </ion-list>
 </ion-content>
