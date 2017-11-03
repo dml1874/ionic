@@ -8,6 +8,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ThemeableBrowser } from '@ionic-native/themeable-browser';
 import { AppService } from './app.service';
+import { AppShare } from './app.share';
+// import { QQSDK } from '@ionic-native/qqsdk';
+// import { Wechat } from '@ionic-native/wechat';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,9 @@ import { AppService } from './app.service';
   ],
   providers: [
     StatusBar,
-    SplashScreen, AppService,
+    SplashScreen, 
+    AppService, 
+    AppShare, 
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ThemeableBrowser
   ]

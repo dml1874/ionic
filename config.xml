@@ -84,4 +84,10 @@
     <plugin name="cordova-plugin-splashscreen" spec="^4.0.3" />
     <plugin name="cordova-plugin-ionic-webview" spec="^1.1.16" />
     <plugin name="cordova-plugin-themeablebrowser" spec="^0.2.17" />
+    <plugin name="cordova-plugin-qqsdk" spec="^0.9.6">
+        <variable name="QQ_APP_ID" value="1105786989" />
+    </plugin>
+    <plugin name="cordova-plugin-wechat" spec="git+https://github.com/wowgeeker/cordova-plugin-wechat.git">
+        <variable name="WECHATAPPID" value="wx7b22a8079fcd2f45" />
+    </plugin>
 </widget>
